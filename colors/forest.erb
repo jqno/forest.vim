@@ -344,6 +344,12 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
 <% end -%>
 <% end -%>
 endif
+
+if !has("gui_running")
+    hi Normal guibg=NONE
+    hi Terminal guibg=NONE
+endif
+
 <% links = highlights.select do |highlight| -%>
 <% highlight.length == 2 -%>
 <% end -%>
