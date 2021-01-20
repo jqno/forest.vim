@@ -1,7 +1,7 @@
-" rnb.vim -- Vim color scheme.
-" Author:      foo (foo@foo.foo)
-" Webpage:     http://www.example.com
-" Description: Lorem ipsum dolor sit amet.
+" forest.vim -- Vim color scheme.
+" Author:      Jan Ouwens ()
+" Webpage:     https://github.com/jqno/forest.vim
+" Description: A lush, foresty colorscheme
 " Last Change: 2021-01-20
 
 hi clear
@@ -10,7 +10,7 @@ if exists("syntax_on")
   syntax reset
 endif
 
-let colors_name = "rnb"
+let colors_name = "forest"
 
 if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi Normal ctermbg=16 ctermfg=193 cterm=NONE guibg=#1C0603 guifg=#DAF8BF gui=NONE
