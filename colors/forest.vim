@@ -21,6 +21,7 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi Type ctermbg=NONE ctermfg=112 cterm=NONE guibg=NONE guifg=#87E62D gui=NONE
     hi Constant ctermbg=NONE ctermfg=202 cterm=NONE guibg=NONE guifg=#F6571E gui=NONE
     hi Comment ctermbg=NONE ctermfg=44 cterm=NONE guibg=NONE guifg=#1ADBC8 gui=NONE
+    hi Title ctermbg=NONE ctermfg=44 cterm=NONE guibg=NONE guifg=#1ADBC8 gui=NONE
     hi Special ctermbg=NONE ctermfg=194 cterm=NONE guibg=NONE guifg=#EAFBDA gui=NONE
     hi Conceal ctermbg=NONE ctermfg=22 cterm=NONE guibg=NONE guifg=#1E3706 gui=NONE
     hi Todo ctermbg=NONE ctermfg=165 cterm=NONE guibg=NONE guifg=#D41DF5 gui=NONE
@@ -71,6 +72,7 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     hi Type ctermbg=NONE ctermfg=green cterm=NONE
     hi Constant ctermbg=NONE ctermfg=red cterm=NONE
     hi Comment ctermbg=NONE ctermfg=cyan cterm=NONE
+    hi Title ctermbg=NONE ctermfg=cyan cterm=NONE
     hi Special ctermbg=NONE ctermfg=white cterm=NONE
     hi Conceal ctermbg=NONE ctermfg=darkgray cterm=NONE
     hi Todo ctermbg=NONE ctermfg=magenta cterm=NONE
@@ -146,7 +148,6 @@ hi link Delimiter Special
 hi link Tag Special
 hi link Ignore Conceal
 hi link Question MoreMsg
-hi link Title MoreMsg
 hi link Directory MoreMsg
 hi link StatusLineTerm StatusLine
 hi link StatusLineTermNC StatusLineNC
@@ -161,22 +162,22 @@ hi link VisualNOS Visual
 hi link QuickFixLine Visual
 
 let g:terminal_ansi_colors = [
-        \ '#000000',
-        \ '#800000',
-        \ '#008000',
-        \ '#808000',
-        \ '#000080',
-        \ '#800080',
-        \ '#008080',
-        \ '#c0c0c0',
-        \ '#808080',
-        \ '#ff0000',
-        \ '#00ff00',
-        \ '#ffff00',
-        \ '#0000ff',
-        \ '#ff00ff',
-        \ '#00ffff',
-        \ '#ffffff',
+        \ '#1C0603',
+        \ '#F6331E',
+        \ '#6AC217',
+        \ '#E6B52D',
+        \ '#1D9FF5',
+        \ '#D41DF5',
+        \ '#1ADBC8',
+        \ '#DAF8BF',
+        \ '#370B06',
+        \ '#F6571E',
+        \ '#87E62D',
+        \ '#E6B52D',
+        \ '#1D9FF5',
+        \ '#D41DF5',
+        \ '#1ADBC8',
+        \ '#EAFBDA',
         \ ]
 
 " Generated with RNB (https://github.com/romainl/vim-rnb)
