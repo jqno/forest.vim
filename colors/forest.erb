@@ -204,7 +204,7 @@
         [ "Directory", "ModeMsg" ],
 
         [ "StatusLine", guide, standout, none ],
-        [ "StatusLineNC", bezel, cursor, none ],
+        [ "StatusLineNC", bezel, invisible, none ],
         [ "StatusLineTerm", "StatusLine" ],
         [ "StatusLineTermNC", "StatusLineNC" ],
         [ "TabLine", "StatusLineNC" ],
@@ -260,6 +260,15 @@
         # ALE
         [ "ALEWarningSign", none, warning, none ],
         [ "ALEErrorSign", none, error, none ],
+
+        # jqno-statusline
+        [ "SLbackground", bezel, normal, none ],
+        [ "SLnormalmode", forest1, forest10, none ],
+        [ "SLnormalmodeI", bezel, forest1, none ],
+        [ "SLinsertmode", forest4, forest10, none ],
+        [ "SLinsertmodeI", bezel, forest4, none ],
+        [ "SLvisualmode", selection, bezel, none ],
+        [ "SLvisualmodeI", bezel, selection, none ],
     ]
 
     # Define the color palette used by :terminal when in GUI Vim

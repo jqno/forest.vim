@@ -36,7 +36,7 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi ModeMsg ctermbg=39 ctermfg=16 cterm=NONE guibg=#1D9FF5 guifg=#1C0603 gui=NONE
     hi MoreMsg ctermbg=184 ctermfg=16 cterm=NONE guibg=#E6E62D guifg=#1C0603 gui=NONE
     hi StatusLine ctermbg=52 ctermfg=184 cterm=NONE guibg=#4E1009 guifg=#E6E62D gui=NONE
-    hi StatusLineNC ctermbg=16 ctermfg=70 cterm=NONE guibg=#0F1B03 guifg=#6AC217 gui=NONE
+    hi StatusLineNC ctermbg=16 ctermfg=22 cterm=NONE guibg=#0F1B03 guifg=#37650B gui=NONE
     hi WildMenu ctermbg=16 ctermfg=184 cterm=NONE guibg=#0F1B03 guifg=#E6E62D gui=NONE
     hi VertSplit ctermbg=16 ctermfg=16 cterm=NONE guibg=#0F1B03 guifg=#0F1B03 gui=NONE
     hi Cursor ctermbg=70 ctermfg=NONE cterm=NONE guibg=#6AC217 guifg=NONE gui=NONE
@@ -68,6 +68,13 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi diffLine ctermbg=NONE ctermfg=39 cterm=NONE guibg=NONE guifg=#1D9FF5 gui=NONE
     hi ALEWarningSign ctermbg=NONE ctermfg=178 cterm=NONE guibg=NONE guifg=#E6B52D gui=NONE
     hi ALEErrorSign ctermbg=NONE ctermfg=196 cterm=NONE guibg=NONE guifg=#F6331E gui=NONE
+    hi SLbackground ctermbg=16 ctermfg=194 cterm=NONE guibg=#0F1B03 guifg=#EAFBDA gui=NONE
+    hi SLnormalmode ctermbg=52 ctermfg=184 cterm=NONE guibg=#4E1009 guifg=#E6E62D gui=NONE
+    hi SLnormalmodeI ctermbg=16 ctermfg=52 cterm=NONE guibg=#0F1B03 guifg=#4E1009 gui=NONE
+    hi SLinsertmode ctermbg=40 ctermfg=184 cterm=NONE guibg=#23C417 guifg=#E6E62D gui=NONE
+    hi SLinsertmodeI ctermbg=16 ctermfg=40 cterm=NONE guibg=#0F1B03 guifg=#23C417 gui=NONE
+    hi SLvisualmode ctermbg=22 ctermfg=16 cterm=NONE guibg=#37650B guifg=#0F1B03 gui=NONE
+    hi SLvisualmodeI ctermbg=16 ctermfg=22 cterm=NONE guibg=#0F1B03 guifg=#37650B gui=NONE
 
 elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     set t_Co=16
@@ -95,7 +102,7 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     hi ModeMsg ctermbg=blue ctermfg=black cterm=NONE
     hi MoreMsg ctermbg=yellow ctermfg=black cterm=NONE
     hi StatusLine ctermbg=darkgray ctermfg=yellow cterm=NONE
-    hi StatusLineNC ctermbg=black ctermfg=darkgreen cterm=NONE
+    hi StatusLineNC ctermbg=black ctermfg=darkgray cterm=NONE
     hi WildMenu ctermbg=black ctermfg=yellow cterm=NONE
     hi VertSplit ctermbg=black ctermfg=black cterm=NONE
     hi Cursor ctermbg=darkgreen ctermfg=NONE cterm=NONE
@@ -127,6 +134,13 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     hi diffLine ctermbg=NONE ctermfg=blue cterm=NONE
     hi ALEWarningSign ctermbg=NONE ctermfg=darkyellow cterm=NONE
     hi ALEErrorSign ctermbg=NONE ctermfg=darkred cterm=NONE
+    hi SLbackground ctermbg=black ctermfg=white cterm=NONE
+    hi SLnormalmode ctermbg=darkgray ctermfg=yellow cterm=NONE
+    hi SLnormalmodeI ctermbg=black ctermfg=darkgray cterm=NONE
+    hi SLinsertmode ctermbg=darkgreen ctermfg=yellow cterm=NONE
+    hi SLinsertmodeI ctermbg=black ctermfg=darkgreen cterm=NONE
+    hi SLvisualmode ctermbg=darkgray ctermfg=black cterm=NONE
+    hi SLvisualmodeI ctermbg=black ctermfg=darkgray cterm=NONE
 endif
 
 if !has("gui_running")
