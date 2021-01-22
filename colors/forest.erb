@@ -99,22 +99,25 @@
     primary     = forest14
     secondary   = forest4
     standout    = forest10
+    subdued     = forest11
     bezel       = forest2
     guide       = forest1
     selection   = forest3
     cursor      = forest5
     error       = forest7
     warning     = forest9
-    success     = forest11
+    success     = forest6
     invisible   = forest3
     reserved    = forest4
     statement   = forest5
     type        = forest6
     identifier  = forest14
     literal     = forest13
+    string      = forest8
     operator    = forest9
     comment     = forest10
-    escape      = forest8
+    commentspecial = forest9
+    escape      = forest13
     todo        = forest12
 
     none        = "NONE"
@@ -157,66 +160,68 @@
     # :help highlight-default, the others are taken from :help group-name. Both help sections
     # are good reads, by the way.
     highlights = [
-        [ "Normal", white, darkgray, none ],
+        [ "Normal", background, normal, none ],
         [ "Terminal", "Normal" ],
-        [ "NonText", white, darkgray, none ],
+        [ "NonText", none, invisible, none ],
         [ "EndOfBuffer", "NonText" ],
 
-        [ "Identifier", white, darkgray, none ],
-        [ "Function", "Identifier" ],
+        [ "Identifier", none, identifier, none ],
+        [ "Function", none, type, none ],
 
-        [ "Statement", white, darkgray, none ],
-        [ "Conditional", "Statement" ],
-        [ "Exception", "Statement" ],
-        [ "Keyword", "Statement" ],
-        [ "Label", "Statement" ],
-        [ "Operator", "Statement" ],
-        [ "Repeat", "Statement" ],
+        [ "Statement", none, statement, none ],
 
-        [ "PreProc", white, darkgray, none ],
+        [ "Keyword", none, reserved, none ],
+        [ "Conditional", "Keyword" ],
+        [ "Exception", "Keyword" ],
+        [ "Label", "Keyword" ],
+        [ "Repeat", "Keyword" ],
+
+        [ "Operator", none, operator, none ],
+
+        [ "PreProc", none, statement, none ],
         [ "Define", "PreProc" ],
         [ "Include", "PreProc" ],
         [ "Macro", "PreProc" ],
         [ "PreCondit", "PreProc" ],
 
-        [ "Type", white, darkgray, none ],
+        [ "Type", none, type, none ],
         [ "StorageClass", "Type" ],
         [ "Structure", "Type" ],
         [ "Typedef", "Type" ],
 
-        [ "Constant", white, darkgray, none ],
+        [ "Constant", none, literal, none ],
         [ "Boolean", "Constant" ],
         [ "Character", "Constant" ],
         [ "Float", "Constant" ],
         [ "Number", "Constant" ],
-        [ "String", "Constant" ],
+        [ "String", none, string, none ],
 
-        [ "Comment", white, darkgray, none ],
-        [ "SpecialComment", "Comment" ],
+        [ "Comment", none, comment, none ],
+        [ "SpecialComment", none, commentspecial, none ],
 
-        [ "Special", white, darkgray, none ],
+        [ "Special", none, escape, none ],
         [ "SpecialKey", "Special" ],
         [ "SpecialChar", "Special" ],
         [ "Debug", "Special" ],
         [ "Delimiter", "Special" ],
         [ "Tag", "Special" ],
 
-        [ "Conceal", white, darkgray, none ],
-        [ "Ignore", white, darkgray, none ],
-        [ "Todo", white, darkgray, none ],
-        [ "Underlined", white, darkgray, none ],
+        [ "Conceal", none, invisible, none ],
+        [ "Ignore", none, invisible, none ],
+        [ "Todo", none, todo, none ],
+        [ "Underlined", none, none, "underline", normal ],
 
-        [ "ErrorMsg", white, darkgray, none ],
-        [ "WarningMsg", white, darkgray, none ],
+        [ "ErrorMsg", error, normal, none ],
+        [ "WarningMsg", warning, normal, none ],
 
-        [ "ModeMsg", white, darkgray, none ],
-        [ "MoreMsg", "ModeMsg" ],
+        [ "ModeMsg", secondary, background, none ],
+        [ "MoreMsg", standout, background, none ],
         [ "Question", "ModeMsg" ],
         [ "Title", "ModeMsg" ],
         [ "Directory", "ModeMsg" ],
 
-        [ "StatusLine", white, darkgray, none ],
-        [ "StatusLineNC", white, darkgray, none ],
+        [ "StatusLine", guide, standout, none ],
+        [ "StatusLineNC", bezel, cursor, none ],
         [ "StatusLineTerm", "StatusLine" ],
         [ "StatusLineTermNC", "StatusLineNC" ],
         [ "TabLine", "StatusLineNC" ],
@@ -224,46 +229,54 @@
         [ "TabLineSel", "StatusLine" ],
         [ "ToolbarButton", "StatusLine" ],
         [ "ToolbarLine", "StatusLineNC" ],
-        [ "WildMenu", white, darkgray, none ],
-        [ "VertSplit", white, darkgray, none ],
+        [ "WildMenu", bezel, standout, none ],
+        [ "VertSplit", bezel, bezel, none ],
 
-        [ "Cursor", white, darkgray, none ],
-        [ "CursorColumn", white, darkgray, none ],
-        [ "CursorLine", "CursorColumn" ],
-        [ "CursorLineNr", "CursorColumn" ],
+        [ "Cursor", cursor, none, none ],
+        [ "CursorColumn", guide, none, none ],
+        [ "CursorLine", guide, none, none ],
+        [ "CursorLineNr", guide, secondary, none ],
         [ "CursorIM", "Cursor" ],
-        [ "ColorColumn", white, darkgray, none ],
-        [ "LineNr", white, darkgray, none ],
+        [ "ColorColumn", guide, none, none ],
+        [ "LineNr", none, secondary, none ],
         [ "lCursor", "Cursor" ],
 
-        [ "SignColumn", white, darkgray, none ],
-        [ "Error", white, darkgray, none ],
+        [ "SignColumn", guide, none, none ],
+        [ "Error", guide, error, none ],
 
-        [ "Visual", white, darkgray, none ],
+        [ "Visual", selection, none, none ],
         [ "VisualNOS", "Visual" ],
         [ "QuickFixLine", "Visual" ],
 
-        [ "Pmenu", white, darkgray, none ],
-        [ "PmenuSbar", white, darkgray, none ],
-        [ "PmenuSel", white, darkgray, none ],
-        [ "PmenuThumb", white, darkgray, none ],
+        [ "Pmenu", selection, cursor, none ],
+        [ "PmenuSbar", selection, cursor, none ],
+        [ "PmenuSel", primary, guide, none ],
+        [ "PmenuThumb", primary, guide, none ],
 
-        [ "FoldColumn", white, darkgray, none ],
-        [ "Folded", white, darkgray, none ],
+        [ "FoldColumn", guide, subdued, none ],
+        [ "Folded", primary, guide, none ],
 
-        [ "IncSearch", white, darkgray, none ],
-        [ "MatchParen", white, darkgray, none ],
-        [ "Search", white, darkgray, none ],
+        [ "IncSearch", standout, background, none ],
+        [ "MatchParen", standout, background, none ],
+        [ "Search", primary, background, none ],
 
-        [ "SpellBad", white, darkgray, none, red ],
-        [ "SpellCap", white, darkgray, none, blue ],
-        [ "SpellLocal", white, darkgray, none, magenta ],
-        [ "SpellRare", white, darkgray, none, cyan ],
+        [ "SpellBad", none, error, "underline", error ],
+        [ "SpellCap", none, warning, "underline", warning ],
+        [ "SpellLocal", none, success, "underline", success ],
+        [ "SpellRare", none, success, "underline", success ],
 
-        [ "DiffAdd", white, darkgray, none ],
-        [ "DiffChange", white, darkgray, none ],
-        [ "DiffDelete", white, darkgray, none ],
-        [ "DiffText", white, darkgray, none ],
+        [ "DiffAdd", success, background, none ],
+        [ "DiffChange", warning, background, none ],
+        [ "DiffDelete", error, background, none ],
+        [ "DiffText", subdued, background, none ],
+        [ "diffAdded", "DiffAdd" ],
+        [ "diffRemoved", "DiffDelete" ],
+        [ "diffChanged", "DiffChange" ],
+        [ "diffLine", none, subdued, none ],
+
+        # ALE
+        [ "ALEWarningSign", guide, warning, none ],
+        [ "ALEErrorSign", guide, error, none ],
     ]
 
     # Define the color palette used by :terminal when in GUI Vim
