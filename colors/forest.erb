@@ -61,13 +61,13 @@
     # If your colors are defined correctly, the resulting colorscheme is guaranteed
     # to work in GVim (Windows/Linux), MacVim (MacOS), and any properly set up terminal emulator.
     forest0     = ["#1C0603", 16, "black"]
-    forest1     = ["#370B06", 52, "darkgray"]
+    forest1     = ["#4E1009", 52, "darkgray"]
     forest2     = ["#0F1B03", 16, "black"]
-    forest3     = ["#1E3706", 22, "darkgray"]
+    forest3     = ["#37650B", 22, "darkgray"]
     forest4     = ["#23C417", 40, "darkgreen"]
     forest5     = ["#6AC217", 70, "darkgreen"]
     forest6     = ["#87E62D", 112, "green"]
-    forest7     = ["#F6331E", 202, "darkred"]
+    forest7     = ["#F6331E", 196, "darkred"]
     forest8     = ["#F6571E", 202, "red"]
     forest9     = ["#E6B52D", 178, "darkyellow"]
     forest10    = ["#E6E62D", 184, "yellow"]
@@ -80,9 +80,9 @@
     background  = forest0
     normal      = forest15
     primary     = forest14
-    secondary   = forest4
+    secondary   = forest11
     standout    = forest10
-    subdued     = forest11
+    subdued     = forest3
     bezel       = forest2
     guide       = forest1
     selection   = forest3
@@ -221,10 +221,10 @@
         [ "CursorLineNr", guide, secondary, none ],
         [ "CursorIM", "Cursor" ],
         [ "ColorColumn", guide, none, none ],
-        [ "LineNr", none, secondary, none ],
+        [ "LineNr", none, subdued, none ],
         [ "lCursor", "Cursor" ],
 
-        [ "SignColumn", guide, none, none ],
+        [ "SignColumn", none, none, none ],
         [ "Error", guide, error, none ],
 
         [ "Visual", selection, none, none ],
@@ -251,15 +251,15 @@
         [ "DiffAdd", success, background, none ],
         [ "DiffChange", warning, background, none ],
         [ "DiffDelete", error, background, none ],
-        [ "DiffText", subdued, background, none ],
+        [ "DiffText", secondary, background, none ],
         [ "diffAdded", "DiffAdd" ],
         [ "diffRemoved", "DiffDelete" ],
         [ "diffChanged", "DiffChange" ],
-        [ "diffLine", none, subdued, none ],
+        [ "diffLine", none, secondary, none ],
 
         # ALE
-        [ "ALEWarningSign", guide, warning, none ],
-        [ "ALEErrorSign", guide, error, none ],
+        [ "ALEWarningSign", none, warning, none ],
+        [ "ALEErrorSign", none, error, none ],
     ]
 
     # Define the color palette used by :terminal when in GUI Vim
