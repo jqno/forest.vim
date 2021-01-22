@@ -176,22 +176,22 @@ hi link diffRemoved DiffDelete
 hi link diffChanged DiffChange
 
 let g:terminal_ansi_colors = [
-        \ '#000000',
-        \ '#800000',
-        \ '#008000',
-        \ '#808000',
-        \ '#000080',
-        \ '#800080',
-        \ '#008080',
-        \ '#c0c0c0',
-        \ '#808080',
-        \ '#ff0000',
-        \ '#00ff00',
-        \ '#ffff00',
-        \ '#0000ff',
-        \ '#ff00ff',
-        \ '#00ffff',
-        \ '#ffffff',
+        \ '#1C0603',
+        \ '#F6331E',
+        \ '#23C417',
+        \ '#E6B52D',
+        \ '#1D9FF5',
+        \ '#D41DF5',
+        \ '#1ADBC8',
+        \ '#DAF8BF',
+        \ '#370B06',
+        \ '#F6571E',
+        \ '#87E62D',
+        \ '#E6E62D',
+        \ '#1D9FF5',
+        \ '#D41DF5',
+        \ '#1ADBC8',
+        \ '#EAFBDA',
         \ ]
 
 " Generated with RNB (https://github.com/romainl/vim-rnb)
